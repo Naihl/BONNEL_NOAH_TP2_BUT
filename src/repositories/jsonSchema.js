@@ -71,12 +71,10 @@ const watchlistSchema = {
     "additionalProperties": false
 };
 
-// Ajoutez vos schémas au validateur
 v.addSchema(userSchema, '/User');
 v.addSchema(itemSchema, '/Item');
 v.addSchema(watchlistSchema, '/Watchlist');
 
-// Fonction pour valider une entité en fonction de son schéma
 const validateEntity = (entity, schema) => {
     return v.validate(entity, schema);
 };
